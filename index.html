@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juego de Tanques</title>
+<style>
+    body {
+        margin: 0;
+        overflow: hidden;
+        background: #222;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+    canvas {
+        display: block;
+        background: #333333;
+        margin: auto;
+    }
+    #instrucciones {
+        text-align: center;
+        padding: 15px;
+        background: #111;
+        border-bottom: 2px solid #444;
+    }
+    #instrucciones h2 {
+        margin: 5px 0;
+        color: #f1c40f;
+    }
+    #instrucciones p {
+        margin: 5px 0;
+    }
+    .jugador {
+        margin: 10px 0;
+    }
+    .rojo {
+        color: #e74c3c;
+        font-weight: bold;
+    }
+    .azul {
+        color: #3498db;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<div id="instrucciones">
+    <h2>🎮 Instrucciones del Juego</h2>
+    <div class="jugador">
+        <span class="rojo">Jugador 1 (Rojo)</span><br>
+        🚀 Avanzar: <b>W</b><br>
+        ⏪ Retroceder: <b>S</b><br>
+        💥 Disparar: <b>R</b>
+    </div>
+    <div class="jugador">
+        <span class="azul">Jugador 2 (Azul)</span><br>
+        🚀 Avanzar: <b>Flecha ↑</b><br>
+        ⏪ Retroceder: <b>Flecha ↓</b><br>
+        💥 Disparar: <b>L</b>
+    </div>
+    <p>👉 El tanque gira automáticamente cuando no se mueve.<br>
+    👉 Los disparos rebotan en paredes y obstáculos.<br>
+    👉 ¡El primero en acertar gana! 🔥</p>
+</div>
+
+<canvas id="gameCanvas" width="800" height="600"></canvas>
+
+<script src="game.js"></script>
+</body>
+</html>
